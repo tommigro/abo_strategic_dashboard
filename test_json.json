@@ -1,0 +1,239 @@
+{
+  "data": {
+    "label": "Internationalization"
+  }
+  },
+  {
+  "data": {
+  "label": "License Management"
+  }
+  },
+  {
+  "data": {
+  "label": "Geographic Information (GIS)"
+  }
+  },
+  {
+  "data": {
+  "label": "Change Management"
+  }
+  },
+  {
+  "data": {
+  "label": "Interfaces"
+  }
+  },
+  {
+  "data": {
+  "label": "Consolidation & Deconsolidation"
+  }
+  },
+  {
+  "data": {
+  "label": "Data Integrity, Transparency & Governance"
+  }
+  },
+  {
+  "data": {
+  "label": "Document Management"
+  }
+  },
+  {
+  "data": {
+  "label": "Layouting, Construction Design & Collab (GIS/CAD/BIM)"
+  }
+  },
+  {
+  "data": {
+  "label": "Support"
+  }
+  },
+  {
+  "data": {
+  "label": "Webcon Workflow"
+  }
+  },
+  {
+  "data": {
+  "label": "Operation & Maintenance"
+  }
+  },
+  {
+  "data": {
+  "label": "IT Project Cockpit (”Flugplan”)"
+  }
+  },
+  {
+  "data": {
+  "label": "IT Software Landscapes"
+  }
+  },
+  {
+  "data": {
+  "label": "Business Intelligence"
+  }
+  },
+  {
+  "data": {
+  "label": "IT-Infrastructure"
+  }
+  },
+  {
+  "data": {
+  "label": "Mobile Office"
+  }
+  },
+  {
+  "data": {
+  "label": "Security"
+  }
+  },
+  {
+  "data": {
+  "label": "Digitization Programms"
+  }
+  },
+  {
+  "data": {
+  "label": "Special Services"
+  }
+  },
+  {
+  "data": {
+  "label": "Desktop Virtualization"
+  }
+  },
+  {
+  "data": {
+  "label": "Software Standards"
+  }
+  },
+  {
+  "data": {
+  "label": "Planning & Processes"
+  }
+  },
+  {
+  "data": {
+  "label": "Geoenabling, Onboarding Departments"
+  }
+  },
+  {
+  "data": {
+  "label": "Knowledge Transfer"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Software Standards"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Interfaces"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Internationalization"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Software Standards"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Geoenabling, Onboarding Departments"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Business Intelligence"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "IT Software Landscapes"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Data Integrity, Transparency & Governance"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Business Intelligence"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Document Management"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Planning & Processes"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Data Integrity, Transparency & Governance"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Geoenabling, Onboarding Departments"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Internationalization"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Planning & Processes"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "IT Project Cockpit (”Flugplan”)"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Software Standards"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Layouting, Construction Design & Collab (GIS/CAD/BIM)"
+  }
+  },
+  {
+  "data": {
+  "source": "Knowledge Transfer",
+  "target": "Planning & Processes"
+  }
+}

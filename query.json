@@ -1,0 +1,148 @@
+{
+  "object": "page",
+  "id": "6425a1b5-35f1-4fec-939f-fb13f94dc56c",
+  "created_time": "2022-03-15T18:00:00.000Z",
+  "last_edited_time": "2022-03-15T18:04:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "b6f1dfb3-c20f-4ec9-a316-d4bacbdb12c6"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "b6f1dfb3-c20f-4ec9-a316-d4bacbdb12c6"
+  },
+  "cover": null,
+  "icon": null,
+  "parent": {
+    "type": "database_id",
+    "database_id": "87544933-f692-4c55-826e-22418a647adf"
+  },
+  "archived": false,
+  "properties": {
+    "Team_Dependencies": {
+      "id": "%3E%3C%60%5E",
+      "type": "multi_select",
+      "multi_select": []
+    },
+    "Themes": {
+      "id": "H%7D%40R",
+      "type": "relation",
+      "relation": [
+        {
+          "id": "f66f1840-084d-4fd6-b615-35b84f9a0a8e"
+        }
+      ]
+    },
+    "Need for action": {
+      "id": "PBqX",
+      "type": "select",
+      "select": null
+    },
+    "Created": {
+      "id": "Uh%3Ek",
+      "type": "created_time",
+      "created_time": "2022-03-15T18:00:00.000Z"
+    },
+    "Property": {
+      "id": "VvJU",
+      "type": "created_by",
+      "created_by": {
+        "object": "user",
+        "id": "b6f1dfb3-c20f-4ec9-a316-d4bacbdb12c6",
+        "name": "Verena",
+        "avatar_url": null,
+        "type": "person",
+        "person": {
+          "email": "verena.gorris@abo-wind.de"
+        }
+      }
+    },
+    "Stakeholder": {
+      "id": "YsQ%3D",
+      "type": "multi_select",
+      "multi_select": []
+    },
+    "Team": {
+      "id": "%5BYCO",
+      "type": "multi_select",
+      "multi_select": [
+        {
+          "id": "4d31ec95-c73a-428a-bad2-a98c29f70a77",
+          "name": "SoftArch",
+          "color": "red"
+        }
+      ]
+    },
+    "Devops": {
+      "id": "dXKl",
+      "type": "url",
+      "url": null
+    },
+    "Priority": {
+      "id": "iTw%60",
+      "type": "select",
+      "select": null
+    },
+    "Objectives": {
+      "id": "jSu%7B",
+      "type": "relation",
+      "relation": []
+    },
+    "Dependencies to other activities": {
+      "id": "k%7DuR",
+      "type": "relation",
+      "relation": [
+        {
+          "id": "f9f815fa-9f53-4d6c-8ba8-f0aefe0e7cae"
+        },
+        {
+          "id": "c4251823-4a39-4f86-89ce-f47436457394"
+        }
+      ]
+    },
+    "Project": {
+      "id": "og%60%5B",
+      "type": "multi_select",
+      "multi_select": []
+    },
+    "Date": {
+      "id": "tYyi",
+      "type": "date",
+      "date": null
+    },
+    "Activity (Project etc.)": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": {
+            "content": "Intern. Software Usage (Today)",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Intern. Software Usage (Today)",
+          "href": null
+        }
+      ]
+    },
+    "get rid?": {
+      "id": "0eb39a95-e0df-47d1-94fe-ba2e352971e0",
+      "type": "checkbox",
+      "checkbox": false
+    },
+    "Purpose": {
+      "id": "10850bef-bff7-49e0-af64-376d9638afaf",
+      "type": "rich_text",
+      "rich_text": []
+    }
+  },
+  "url": "https://www.notion.so/Intern-Software-Usage-Today-6425a1b535f14fec939ffb13f94dc56c"
+}

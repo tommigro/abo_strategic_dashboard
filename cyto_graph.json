@@ -1,0 +1,110 @@
+[
+  {
+    "data": {
+      "id": "la",
+      "label": "Los Angeles"
+    }
+  },
+  {
+    "data": {
+      "id": "nyc",
+      "label": "New York"
+    }
+  },
+  {
+    "data": {
+      "id": "to",
+      "label": "Toronto"
+    }
+  },
+  {
+    "data": {
+      "id": "mtl",
+      "label": "Montreal"
+    }
+  },
+  {
+    "data": {
+      "id": "van",
+      "label": "Vancouver"
+    }
+  },
+  {
+    "data": {
+      "id": "chi",
+      "label": "Chicago"
+    }
+  },
+  {
+    "data": {
+      "id": "bos",
+      "label": "Boston"
+    }
+  },
+  {
+    "data": {
+      "id": "hou",
+      "label": "Houston"
+    }
+  },
+  {
+    "data": {
+      "source": "van",
+      "target": "la"
+    }
+  },
+  {
+    "data": {
+      "source": "la",
+      "target": "chi"
+    }
+  },
+  {
+    "data": {
+      "source": "hou",
+      "target": "chi"
+    }
+  },
+  {
+    "data": {
+      "source": "to",
+      "target": "mtl"
+    }
+  },
+  {
+    "data": {
+      "source": "mtl",
+      "target": "bos"
+    }
+  },
+  {
+    "data": {
+      "source": "nyc",
+      "target": "bos"
+    }
+  },
+  {
+    "data": {
+      "source": "to",
+      "target": "hou"
+    }
+  },
+  {
+    "data": {
+      "source": "to",
+      "target": "nyc"
+    }
+  },
+  {
+    "data": {
+      "source": "la",
+      "target": "nyc"
+    }
+  },
+  {
+    "data": {
+      "source": "nyc",
+      "target": "bos"
+    }
+  }
+]
