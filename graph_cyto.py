@@ -1,11 +1,15 @@
 import dash
 import dash_cytoscape as cyto
-from dash import html
+import dash_daq as daq
+from dash import Dash, dcc, html, Input, Output
 from dash.dependencies import Input, Output, State
-from dash import dcc
 import json
 cyto.load_extra_layouts()
+
+
+
 class Graph:
+
     def __init__(self, name):
 
         self.name = name
@@ -17,26 +21,58 @@ class Graph:
     def addEdge(self, source, target):
         self.nodes.append({"data":{"source":source, "target":target}})
     def showGraph(self):
-        default_stylesheet = [
-            {
-                "selector": "node",
-                "style": {
-                    "width": "100%",
-                    "height": "350px",
-                    "content": "data(label)",
-                    "font-size": "20px",
-                    "text-valign": "center",
-                    "text-halign": "center",
+
+        layout = 'breadthfirst'
+
+        @self.app.callback(
+            Output('cytoscape-layout-1', 'layout'),
+            Input('demo-dropdown', 'value')
+        )
+        def update_layout(value):
+            if value == 'breadthfirst':
+                return {
+                    'name': value,
+                    'roots': '[label = "License Management"]',
+                    'animate': True
                 }
-            }
-        ]
+            else:
+                return {
+                    'name': value,
+                    'animate': True
+                }
+        @self.app.callback(
+            Output('cytoscape-layout-1', 'stylesheet'),
+            Input('font-slider', 'value')
+        )
+        def update_fontsize(value):
+            size = str(value) + 'px'
+            return[{
+                "selector": "node",
+                "style":{
+                    "font-size": size,
+                    "color": "black",
+                    "content": "data(label)",
+                    "width": value,
+                    "height": value
+                }
+            }]
         self.app.layout = html.Div([
+            dcc.Dropdown(['breadthfirst', 'circle', 'cola', 'concentric', 'cose', 'euler', 'grid', 'random'], 'breadthfirst', id='demo-dropdown'),
+            html.Div(id='dd-output-container'),
+            daq.Slider(
+                id='font-slider',
+                min=3,
+                max=30,
+                value=15,
+                handleLabel={"showCurrentValue": True, "label": "VALUE"},
+                step=1
+            ),
             cyto.Cytoscape(
                 id="cytoscape-layout-1",
                 elements=self.nodes,
                 style={"width": "100%", "height": "1200px"},
                 layout={
-                    "name": "breadthfirst",
+                    "name": layout,
                     'roots': '[label = "License Management"]'
                 },
                 stylesheet=[{
