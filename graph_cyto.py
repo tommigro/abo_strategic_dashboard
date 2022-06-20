@@ -1,9 +1,12 @@
+import json
+
 import dash
 import dash_cytoscape as cyto
 import dash_daq as daq
-from dash import Dash, dcc, html, Input, Output
-from dash.dependencies import Input, Output, State
-import json
+import networkx as nx
+from dash import dcc, html
+from dash.dependencies import Input, Output
+
 cyto.load_extra_layouts()
 
 
@@ -11,35 +14,48 @@ cyto.load_extra_layouts()
 class Graph:
 
     def __init__(self, name):
-
         self.name = name
         self.app = dash.Dash(__name__)
         self.nodes = []
+        self.G = nx.Graph()
 
     def addNode(self, id, label):
         self.nodes.append({"data":{"id":id, "label":label}})
+        self.G.add_node(id, label=label)
     def addEdge(self, source, target):
         self.nodes.append({"data":{"source":source, "target":target}})
+        self.G.add_edge(source, target)
     def showGraph(self):
 
         layout = 'breadthfirst'
 
         @self.app.callback(
             Output('cytoscape-layout-1', 'layout'),
-            Input('demo-dropdown', 'value')
+            Input('method', 'value'),
+            Input('topic', 'value')
         )
-        def update_layout(value):
-            if value == 'breadthfirst':
-                return {
-                    'name': value,
-                    'roots': '[label = "License Management"]',
+        def update_layout(method, topic):
+            ctx = dash.callback_context
+            input = ctx.triggered_id
+            if input == 'method':
+                if method == 'breadthfirst':
+                    return {
+                        'name': method,
+                        'roots': '[label = "License Management"]',
+                        'animate': True
+                    }
+                else:
+                    return {
+                        'name': method,
+                        'animate': True
+                    }
+            elif input == 'topic':
+                return{
+                    'name': 'breadthfirst',
+                    'roots': '[label = "' + topic + '"]',
                     'animate': True
                 }
-            else:
-                return {
-                    'name': value,
-                    'animate': True
-                }
+
         @self.app.callback(
             Output('cytoscape-layout-1', 'stylesheet'),
             Input('font-slider', 'value')
@@ -56,8 +72,10 @@ class Graph:
                     "height": value
                 }
             }]
+
         self.app.layout = html.Div([
-            dcc.Dropdown(['breadthfirst', 'circle', 'cola', 'concentric', 'cose', 'euler', 'grid', 'random'], 'breadthfirst', id='demo-dropdown'),
+            dcc.Dropdown(['breadthfirst', 'circle', 'cola', 'concentric', 'cose', 'euler', 'grid', 'random'], 'breadthfirst', id='method'),
+            dcc.Dropdown(['License Management', 'Internationalization', 'Interfaces'],'License Management', id='topic'),
             html.Div(id='dd-output-container'),
             daq.Slider(
                 id='font-slider',
@@ -73,7 +91,7 @@ class Graph:
                 style={"width": "100%", "height": "1200px"},
                 layout={
                     "name": layout,
-                    'roots': '[label = "License Management"]'
+                    'roots': '[label = "Internationalization"]'
                 },
                 stylesheet=[{
                     "selector":"node",
@@ -102,3 +120,6 @@ class Graph:
         str_f_json = "./graph.json"
         with open(str_f_json, "w", encoding="utf8") as f:
             json.dump(json_complete, f, ensure_ascii=False)
+
+    def getNetworkXGraph(self):
+        return self.G

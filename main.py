@@ -8,6 +8,7 @@ import pandas as pd
 
 import graph
 import graph_cyto
+import networkx as nx
 
 token = "secret_n3wKS4kZdgUsy4OhKC8cF70SFIp6G0gEM1i0DzRNAJe"
 databaseId_themes = "7c8039943a144836948a5a4f1fb8baf5"
@@ -63,5 +64,9 @@ readDatabase(databaseId_themes, "themes", headers)
 analyzeThemes()
 #getActivityByRelation("6425a1b5-35f1-4fec-939f-fb13f94dc56c")
 g.writeGraph()
+myGraph = g.getNetworkXGraph()
+print(myGraph.degree['f66f1840-084d-4fd6-b615-35b84f9a0a8e'])
+for e, datadict in myGraph.nodes.items():
+    print (e, datadict, myGraph.degree[e])
 #nodes = g.getNodes()
-g.showGraph()
+#g.showGraph()
