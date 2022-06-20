@@ -28,6 +28,7 @@ class Graph:
     def showGraph(self):
 
         layout = 'breadthfirst'
+        degree = 0
 
         @self.app.callback(
             Output('cytoscape-layout-1', 'layout'),
@@ -73,10 +74,19 @@ class Graph:
                 }
             }]
 
+        @self.app.callback(
+            Output('degree', 'value'),
+            Input('topic', 'value')
+        )
+        def update_degree(value):
+            print(value)
+            node = [x for x, y in self.G.nodes(data=True) if y['label'] == value]
+            degree = nx.degree(self.G, node[0])
+            return 'Degree: ' + str(degree)
+
         self.app.layout = html.Div([
             dcc.Dropdown(['breadthfirst', 'circle', 'cola', 'concentric', 'cose', 'euler', 'grid', 'random'], 'breadthfirst', id='method'),
-            dcc.Dropdown(['License Management', 'Internationalization', 'Interfaces'],'License Management', id='topic'),
-            html.Div(id='dd-output-container'),
+            dcc.Dropdown([datadict['label'] for e, datadict in self.G.nodes.items()],'License Management', id='topic'),
             daq.Slider(
                 id='font-slider',
                 min=3,
@@ -84,6 +94,11 @@ class Graph:
                 value=15,
                 handleLabel={"showCurrentValue": True, "label": "VALUE"},
                 step=1
+            ),
+            dcc.Textarea(
+                id='degree',
+                value='degree',
+                style={'width': '30%', 'height': 20},
             ),
             cyto.Cytoscape(
                 id="cytoscape-layout-1",

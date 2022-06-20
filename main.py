@@ -67,6 +67,6 @@ g.writeGraph()
 myGraph = g.getNetworkXGraph()
 print(myGraph.degree['f66f1840-084d-4fd6-b615-35b84f9a0a8e'])
 for e, datadict in myGraph.nodes.items():
-    print (e, datadict, myGraph.degree[e])
+    print (e, datadict['label'], myGraph.degree[e])
 #nodes = g.getNodes()
-#g.showGraph()
+g.showGraph()
