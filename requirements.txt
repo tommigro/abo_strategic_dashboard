@@ -1,0 +1,4 @@
+requests~=2.27.1
+pandas~=1.4.2
+networkx~=2.8.2
+dash~=2.4.1

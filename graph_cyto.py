@@ -128,7 +128,7 @@ class Graph:
             )
         ])
 
-        self.app.run_server(debug=True)
+        self.app.run_server(host='0.0.0.0', port=8080, debug=True)
 
     def writeGraph(self):
         json_complete = {"elements":str(self.nodes)[1:-1]}
